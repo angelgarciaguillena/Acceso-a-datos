@@ -8,9 +8,8 @@ public class EjercicioB {
 
 	public static void main(String[] args) {
 		
-		String rutaBase = "C:/Users/angel.garcia/AD";
+		String rutaBase = "C:\\Users\\angel.garcia\\AD";
 		String nombreAutor = "Angel Garcia";
-		
 		File carpetaBase = new File(rutaBase);
 		
 		if(carpetaBase.exists() && carpetaBase.isDirectory()) {
@@ -61,8 +60,9 @@ public class EjercicioB {
 			writer.write("	</body>" + "\n");
 			writer.write("</html>" + "\n");
 			
-		} catch (IOException e) {
+			writer.close();
 			
+		} catch (IOException e) {
 			System.out.println("No se ha podido crear el archivo en " + ruta);
 		}
 	}

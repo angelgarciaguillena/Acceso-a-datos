@@ -9,8 +9,8 @@ public class EjercicioA {
 
 	public static void main(String[] args) {
 		
-		String rutaFichero = "src/tema2/carpetas.txt";
-		String rutaBase = "C:/Users.angel.garcia/";
+		String rutaFichero = "src\\tema2\\ejercicio1\\carpetas.txt";
+		String rutaBase = "C:\\Users\\angel.garcia\\";
 		String linea;
 		boolean creado;
 		
@@ -37,6 +37,8 @@ public class EjercicioA {
 					System.out.println("La carpeta " + nuevaCarpeta.getAbsolutePath() + " ya existe");
 				}
 			}
+			
+			br.close();
 			
 		} catch (IOException e) {
 			System.err.println("Error: No se puede leer el fichero " + e.getMessage());
