@@ -8,7 +8,7 @@ public class EjercicioB {
 
 	public static void main(String[] args) {
 		
-		String rutaBase = "C:\\Users\\angel.garcia\\AD";
+		String rutaBase = "C:\\Users\\Usuario\\AD";
 		String nombreAutor = "Angel Garcia";
 		File carpetaBase = new File(rutaBase);
 		
