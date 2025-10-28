@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class EjercicioC {
-
+	
     public static void main(String[] args) {
 
         String archivoEntrada = "src\\tema2\\ejercicio2\\palabras_separadas.txt";
         String archivoSalida = "src\\tema2\\ejercicio2\\palabrasOrdenadas.txt";
-        String palabra;
+        String palabra = "";
         ArrayList<String> listaPalabras = new ArrayList<>();
 
         try (RandomAccessFile rafLectura = new RandomAccessFile(archivoEntrada, "r"); RandomAccessFile rafEscritura = new RandomAccessFile(archivoSalida, "rw")) {
-        	
+
             palabra = rafLectura.readLine();
-            
+
             while (palabra != null) {
                 listaPalabras.add(palabra.trim());
                 palabra = rafLectura.readLine();
@@ -26,7 +26,8 @@ public class EjercicioC {
             Collections.sort(listaPalabras);
 
             for (String p : listaPalabras) {
-                rafEscritura.writeBytes(p + System.lineSeparator());
+                rafEscritura.writeBytes(p);      
+                rafEscritura.writeBytes(System.lineSeparator());
             }
 
             System.out.println("Archivo generado correctamente: " + archivoSalida);
