@@ -331,13 +331,18 @@ public class Ejercicio1 {
         filtro = sc.nextLine();
 
         sql = "SELECT * FROM Persona";
-        if (!filtro.isEmpty()) sql += " WHERE nombre LIKE ?";
+        
+        if (!filtro.isEmpty()) {
+        	sql += " WHERE nombre LIKE ?";
+        }
 
         try {
             ps = conexion.prepareStatement(sql);
 
-            if (!filtro.isEmpty())
-                ps.setString(1, "%" + filtro + "%");
+            if (!filtro.isEmpty()) {
+            	ps.setString(1, "%" + filtro + "%");
+            }
+                
 
             rs = ps.executeQuery();
 
@@ -418,7 +423,9 @@ public class Ejercicio1 {
         op = sc.nextInt();
         sc.nextLine();
 
-        if (op == 1) modificarPersona();
+        if (op == 1) {
+        	modificarPersona();
+        }
     }
 
     private static void modificarPersona() {
